@@ -1,12 +1,28 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Ionic4 Ecommerce
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content>
+  <app-ecommerce-slide-image [datas]="slideImage.data.campaign" (itemSelected)="dataSelected($event)"></app-ecommerce-slide-image>
+
+  <app-ecommerce-category *ngIf="category.data" [title]="category.data.category.title" [items]="category.data.category.items"
+    (itemSelected)="itemSelected($event)"></app-ecommerce-category>
+
+  <app-ecommerce-specialsale-grid *ngIf="specialsaleGrid.data" [datas]="specialsaleGrid.data.specialsale"
+    (specialsaleGridData)="itemSelected($event)" (click)="openSpecialSalePage()"></app-ecommerce-specialsale-grid>
+
+  <!-- <app-ecommerce-shop-recommend-scrollx></app-ecommerce-shop-recommend-scrollx> -->
+
+  <!-- <app-ecommerce-shop-grid *ngIf="shopGrid.data" [data]="shopGrid.data.shop.items" [title]="shopGrid.data.shop.title"
+    (selected)=itemSelected($event)></app-ecommerce-shop-grid> -->
+
+  <app-ecommerce-bestseller-scrollx *ngIf="bestsellerScrollx.data" [items]="bestsellerScrollx.data.bestseller"
+    (bestsellerScrollxData)="itemSelected($event)" (click)="openBestSellerPage()"></app-ecommerce-bestseller-scrollx>
+
+  <app-ecommerce-product-grid *ngIf="productGrid.data" [items]='productGrid.data.product.items' (outPutData)="selectedData($event)"></app-ecommerce-product-grid>
+
 </ion-content>

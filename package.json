@@ -25,6 +25,7 @@
     "@ionic-native/status-bar": "5.0.0-beta.21",
     "@ionic/angular": "4.0.0-beta.13",
     "core-js": "^2.5.3",
+    "ionic4-ecommerce-component": "^1.0.19",
     "rxjs": "6.2.2",
     "zone.js": "^0.8.26"
   },
@@ -40,7 +41,7 @@
     "@ionic/angular-toolkit": "^1.0.0",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~10.12.0",
+    "@types/node": "^10.12.1",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
